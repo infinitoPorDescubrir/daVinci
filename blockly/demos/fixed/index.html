@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Da Vinci</title>
+    <link rel="stylesheet" href="simple-grid.min.css">
+    <link rel="stylesheet" href="vinci.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-5">
+                <div class="row">
+                    <button onclick="showCode()">Show JavaScript</button>
+                    <button onclick="runCode()">Run JavaScript</button>
+                </div>
+                <div class="row">
+                    <textarea id="textarea"></textarea>
+                    <img class="loading" src="https://media.giphy.com/media/vanSMWeAwKrFm/giphy.gif"/>
+                    <img style="display:none;" class="loading" src="https://s-media-cache-ak0.pinimg.com/originals/8c/69/7c/8c697c6ea365eddc446159faea1f8c3a.gif"/>
+
+                </div>
+            </div>
+            <div class="col-7">
+                <div id="blocklyDiv"></div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <xml id="toolbox" style="display: none">
+        <block type="controls_whileUntil"></block>
+        <block type="logic_boolean"></block>
+        <block type="move_right"></block>
+        <block type="move_left"></block>
+        <block type="decode_message"></block>
+
+        <block type="string_length"></block>
+        <block type="controls_if"></block>
+        <block type="logic_compare"></block>
+        <block type="controls_repeat_ext"></block>
+        <block type="math_number"></block>
+        <block type="text"></block>
+        <block type="text_print"></block>
+    </xml>
+
+    <script src="../../blockly_compressed.js"></script>
+    <script src="../../blocks_compressed.js"></script>
+    <script src="../../msg/js/es.js"></script>
+    <script src="../../javascript_compressed.js"></script>
+    <script src="vinci.js"></script>
+
+</body>
+
+</html>
