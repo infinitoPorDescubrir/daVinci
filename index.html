@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Da Vinci</title>
+    <link rel="stylesheet" href="vinci.css">
+</head>
+
+<body class="start">
+
+    <div class="container">
+        <div class="row">
+            <div id="leftCol">
+                <div class="row">
+                    <div id="game" class="level0">
+                        <div id="player">
+                        </div>
+                        <div class="grid">
+                        </div>
+                    </div>
+                    <p id="hud">
+                    </p>
+                    <p class="startText">
+                        En estos dibujos de Leonardo da Vinci, hay fragmentos que estan en código. Este robot es capaz de revelarlos, pero deberas crear la maquina que procese las instrucciones que lo guien.
+                    </p>
+                    <p class="succeedText">Lo has resuelto! Continua con el proximo desafío.</p>
+                    <p class="failedText">Algo en tu maquina no anduvo bien. Corrigela y vuelve a intentarlo.</p>
+                    <p class="runningText">
+                        <img src="l.gif" />
+                    </p>
+                    <p class="wonText">
+                        <img src="l.gif" />
+                        <br /><br /> Felicitaciones! <br /><br /> Ahora continua en el lugar donde se crean las maquinas, y no olvides esta clave:
+                        <br /><br />
+                        <img style="background:white;" src="davi.png" />
+                    </p>
+
+                </div>
+                <div class="row">
+                    <button id="startButton" onclick="startButton()">Empezar</button>
+                    <button id="runButton" onclick="runButton()">Ejecutar</button>
+                    <button id="resetButton" onclick="resetButton()">Reintentar</button>
+                    <button id="nextButton" onclick="nextButton()">Continuar</button>
+                    <button id="restartButton" onclick="restartButton()">Recomenzar</button>
+                </div>
+
+            </div>
+            <div id="rightCol">
+                <div id="blocklyDiv"></div>
+            </div>
+        </div>
+    </div>
+
+    <xml id="startBlocks" style="display: none">
+        <block type="on_start" inline="false" x="50" y="50">
+            <statement name="DO">
+            </statement>
+        </block>
+    </xml>
+
+    <xml id="toolbox0" style="display: none">
+        <block type="move_right"></block>
+        <block type="decode_message"></block>
+    </xml>
+
+    <xml id="toolbox1" style="display: none">
+        <block type="move_right"></block>
+        <block type="move_down"></block>
+        <block type="decode_message"></block>
+    </xml>
+
+
+    <xml id="toolbox2" style="display: none">
+        <block type="controls_repeat_ext"></block>
+        <block type="math_number"></block>
+        <block type="move_right"></block>
+        <block type="move_down"></block>
+        <block type="move_left"></block>
+        <block type="move_up"></block>
+        <block type="decode_message"></block>
+    </xml>
+
+    <xml id="toolbox3" style="display: none">
+        <block type="controls_repeat_ext"></block>
+        <block type="math_number"></block>
+        <block type="move_right"></block>
+        <block type="move_down"></block>
+        <block type="move_left"></block>
+        <block type="move_up"></block>
+        <block type="decode_message"></block>
+    </xml>
+
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/blockly_compressed.js"></script>
+    <script src="js/blocks_compressed.js"></script>
+    <script src="js/es.js"></script>
+    <script src="js/javascript_compressed.js"></script>
+    <script src="js/vinci.js"></script>
+
+</body>
+
+</html>
